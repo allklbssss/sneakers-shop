@@ -37,7 +37,7 @@ const HeaderWrapper = styled.header`
   height: 10vh;
   align-items: center;
   gap: 10vw;
-  padding-left: max(25vw, 100px);
+  padding-left: max(18vw, 100px);
 `;
 
 const ShopButton = styled(Link)`
