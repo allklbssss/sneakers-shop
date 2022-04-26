@@ -17,6 +17,9 @@ const Preview = () => {
         mask={true}
         maskClosable={true}
         width={"max(500px, 40vw)"}
+        contentWrapperStyle={{
+          backdropFilter: "blur(50px)"
+        }}
       >
         <SidebarHeader/>
       </StyledDrawer>
@@ -42,7 +45,6 @@ const CardsBlockWrapper = styled.div`
 const StyledDrawer = styled(Drawer)`
   .ant-drawer-content {
     background-color: transparent;
-    backdrop-filter: blur(50px);
 
     .ant-drawer-body {
       padding: 0;
