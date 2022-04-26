@@ -3,10 +3,11 @@ import { Drawer } from "antd";
 import React, { useState } from "react";
 import styled from "styled-components";
 import CardsBlock from "./CardsBlock";
-import HeaderPreview from "./HeaderPreview";
+import SidebarHeader from "./SidebarHeader";
 
 const Preview = () => {
   const [visible, setVisible] = useState<boolean>(false);
+
   return (
     <PreviewWrapper backgroundColor={"#DA6666"}>
       <StyledDrawer
@@ -17,16 +18,26 @@ const Preview = () => {
         maskClosable={true}
         width={"max(500px, 40vw)"}
       >
-        <HeaderPreview/>
+        <SidebarHeader/>
       </StyledDrawer>
-      <TriggerButton onClick={() => setVisible(true)}>
-        <ArrowRightOutlined />
-      </TriggerButton>
+      {!visible && (
+        <TriggerButton onClick={() => setVisible(true)}>
+          <ArrowRightOutlined />
+        </TriggerButton>
+      )}
       <img src={"https://i.ibb.co/dMPVCJD/1.png"} alt="sneakers" />
-      <CardsBlock />
+      <CardsBlockWrapper>
+        <CardsBlock />
+      </CardsBlockWrapper>
     </PreviewWrapper>
   );
 };
+
+const CardsBlockWrapper = styled.div`
+  position: absolute;
+  right: 4vw;
+  top: 25vh;
+`
 
 const StyledDrawer = styled(Drawer)`
   .ant-drawer-content {

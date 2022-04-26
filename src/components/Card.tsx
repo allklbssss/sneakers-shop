@@ -3,10 +3,10 @@ import { ListItem } from "../data";
 
 const Card: React.FC<ListItem> = ({ title, text }) => {
   return (
-    <>
+    <div>
       <CardTitle>{title}</CardTitle>
       <CardText>{text}</CardText>
-    </>
+    </div>
   );
 };
 

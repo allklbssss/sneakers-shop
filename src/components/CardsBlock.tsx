@@ -13,9 +13,6 @@ const CardsBlock = () => {
 };
 
 const BlockWrapper = styled.div`
-  position: absolute;
-  right: 4vw;
-  top: 25vh;
   width: 12vw;
   display: flex;
   flex-direction: column;

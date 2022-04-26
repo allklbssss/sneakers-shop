@@ -10,8 +10,9 @@ const Header = () => {
       <StyledLink to="#">Men</StyledLink>
       <StyledLink to="#">Women</StyledLink>
       <StyledLink to="#">Collections</StyledLink>
-      <ShopButton>SHOP COLLECTION
-      <RightOutlined />
+      <ShopButton to="#">
+        SHOP COLLECTION
+        <RightOutlined />
       </ShopButton>
     </HeaderWrapper>
   );
@@ -39,24 +40,27 @@ const HeaderWrapper = styled.header`
   padding-left: max(25vw, 100px);
 `;
 
-const ShopButton = styled.button`
-position: absolute;
-right: 4vw;
-height: 6vh;
-width: 15vw;
-color: white;
-font-weight: bold;
-background-color: #c74f4f;
-box-shadow: 3px 12px 10px 0 rgba(0, 0, 0, 0.15);
-border: none;
-padding: 15px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+const ShopButton = styled(Link)`
+  position: absolute;
+  right: 4vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  width: 15vw;
+  min-width: 200px;
+  padding: 15px;
+  font-weight: bold;
+  background-color: #c74f4f;
+  color: white;
+  border: none;
+  box-shadow: 3px 12px 10px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 
-&:hover{
-  transition-duration: 300ms;
-  background-color: #a34747;
-}
+  &:hover {
+    transition-duration: 300ms;
+    background-color: #a34747;
+    color: white;
+  }
 `
 export default Header;
