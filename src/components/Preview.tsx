@@ -3,7 +3,9 @@ import { Drawer } from "antd";
 import React, { useState } from "react";
 import styled from "styled-components";
 import CardsBlock from "./CardsBlock";
+import Info from "./Info";
 import SidebarHeader from "./SidebarHeader";
+import SidebarTextBlock from "./SidebarTextBlock";
 
 const Preview = () => {
   const [visible, setVisible] = useState<boolean>(false);
@@ -18,10 +20,12 @@ const Preview = () => {
         maskClosable={true}
         width={"max(500px, 40vw)"}
         contentWrapperStyle={{
-          backdropFilter: "blur(50px)"
+          backdropFilter: "blur(50px)",
         }}
       >
-        <SidebarHeader/>
+        <SidebarHeader />
+        <SidebarTextBlock />
+        <Info />
       </StyledDrawer>
       {!visible && (
         <TriggerButton onClick={() => setVisible(true)}>
@@ -40,14 +44,14 @@ const CardsBlockWrapper = styled.div`
   position: absolute;
   right: 4vw;
   top: 25vh;
-`
+`;
 
 const StyledDrawer = styled(Drawer)`
   .ant-drawer-content {
     background-color: transparent;
 
     .ant-drawer-body {
-      padding: 0;
+      padding: 18% 7% 0 18%;
     }
 
     .ant-drawer-header {

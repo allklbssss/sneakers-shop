@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { data } from "../data";
+import { card } from "../data";
 import Card from "./Card";
 
 const CardsBlock = () => {
   return (
     <BlockWrapper>
-      {data.map(({ title, text }) => (
-        <Card title={title} text={text} />
+      {card.map(({ title, text }) => (
+        <Card $textAlign='end' title={title} text={text} />
       ))}
     </BlockWrapper>
   );
